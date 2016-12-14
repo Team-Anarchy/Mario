@@ -13,9 +13,20 @@ Template.Game.prototype = {
         this.keyboard = this.game.input.keyboard.createCursorKeys();
         
         // change background color.
-        this.game.stage.backgroundColor = '#3498db'
+        //this.game.stage.backgroundColor = '#3498db'
         
         //adding sprites
-        this.player = this.game.add.sprite(100, 300, 'peach');
+        this.player = this.game.add.sprite(100, 300, 'police');
+        this.background 
+        this.foreground
+        this.ground = this.game.add.tileSprite(0,this.game.height - 73, this.game.width,73, "ground");
+        this.ground.autoScroll(-400,0);
+        this.game.physics.startSystem(Phaser.Physics.ARCADE);
+        this.game.physics.arcade.enableBody(this.ground);
+    }, 
+    update: function (){
+        
+        this.game.physics.arcade.collide(this.ground)
+        
     }
 };

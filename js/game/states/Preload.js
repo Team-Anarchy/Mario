@@ -15,11 +15,11 @@ Template.Preload.prototype = {
         // here you load all the game images and what not
         
 
-        this.load.image('peach', "assests/images/peach.gif");
+        this.load.image('police', "assests/images/police.gif");
          this.load.image("logo", "assests/images/logo-fb.png");
-        this.load.image('MainMenu', "assests/images/MainMenu.png");
+        this.load.image('NewMenu', "assests/images/NewMenu.png");
          this.load.image('StartButton', "assests/images/StartButton.png");        
-        
+        this.load.image("ground","assests/images/ground.png");
     },
     create: function() {
         console.log("preload bar is: "+this.preloadbar);
@@ -28,7 +28,7 @@ Template.Preload.prototype = {
     
     update: function() {
         console.log("about to go to to main menu")
-       this.state.start('MainMenu');
+       this.state.start('Menu');
     },
     
     onLoadComplete: function(){
